@@ -1,0 +1,43 @@
+Exemplo erro lexico em python 
+
+
+int x = 25 + 0x #
+        "abc
+
+por mais que o python nao use o ; o analisador lexico
+nao consegue transformar 0x em um token inteiro ou a String
+incompleta "abc
+
+
+Exemplo erro sintatico
+
+media = 7
+soma = + media soma
+
+a estrutura da soma prefixada nao é reconhecida no python, logo
+é um erro de sintaxe
+
+Exemplo erro semantico
+
+n = 8
+if n % 2 == 0
+	print('é par')
+else
+	print('é impar')
+
+
+o analisador lexico nao encontra nenhum erro
+na estrutura do codigo, porém ele nao faz sentido
+configurando assim um erro semantico.
+
+Voltando ao java outro exemplo de erro semantico é
+
+public static void F(){
+
+	// intrucoes
+}
+
+int x = 10 + F;
+
+nao se pode somar F com um inteiro pois o retorn de F é
+void.
