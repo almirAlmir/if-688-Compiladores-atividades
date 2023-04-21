@@ -10,11 +10,8 @@ public class ExpressionEvaluator {
 	Token [] tokens = new Token[linhas.length];
 	for(int i = 0; i<tokens.length; i++) {
 		
-		if(!(linhas[i].equals("+")||
-		     linhas[i].equals("*")||
-		     linhas[i].equals("-")||
-		     linhas[i].equals("/"))) {
-			
+		if(Regex.isNum(linhas[i])) { //Utilizando Regex.isNum para avaliar por Expressao regular se é numerico
+										// INCLUINDO NUMEROS NEGATIVOS
 			tokens[i] = new Token(TokenType.NUM, linhas[i]);
 		}else {
 			
