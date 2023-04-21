@@ -8,19 +8,17 @@ public class Regex {
 		
 		public static boolean isNum(String token) {
 			
-			//Pattern p = Pattern.compile("[+*/-]");
+			//Pattern p = Pattern.compile("-?\\d+"); //Pesquisei sobre Pattern e Matcher e testei usa-los também
 			//Matcher m = p.matcher(token);
-			return token.matches("[+*/-]");
+			return token.matches("-?\\d+");
 			
 		}
 		
 		public static boolean isOP(String token) {
 			
-			//Pattern p = Pattern.compile("-?\\d+"); //Pesquisei sobre Pattern e Matcher e testei usa-los também
+			//Pattern p = Pattern.compile("[+*/-]");
 			//Matcher m = p.matcher(token);
-			return token.matches("-?\\d+");
-			
-			
+			return token.matches("[+*/-]");
 		}
 
 	}
